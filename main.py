@@ -54,12 +54,6 @@ async def roll2(ctx):
   rolltot = rollres + rollres1
   await ctx.send('**'+str(rollres)+' + '+str(rollres1)+' = '+str(rolltot)+'**')
 
-#cointoss
-@bot.command(name='cointoss')
-async def cointoss(ctx):
- cointossGame = ['head', 'tail'] 
- await ctx.send('**''Result:'{random.choice(cointossGame)}'**')
-
 #rock paper scissors
 @bot.command(name='rps')
 async def rps(ctx, user_choice):
