@@ -54,6 +54,12 @@ async def roll2(ctx):
   rolltot = rollres + rollres1
   await ctx.send('**'+str(rollres)+' + '+str(rollres1)+' = '+str(rolltot)+'**')
 
+#cointoss
+@bot.command(name='cointoss')
+async def cointoss(ctx):
+  cointossGame = ['head', 'tail'] 
+  await ctx.send('**'+'Result: ' + str(random.choice(cointossGame))+'**')
+
 #rock paper scissors
 @bot.command(name='rps')
 async def rps(ctx, user_choice):
@@ -67,16 +73,6 @@ async def rps(ctx, user_choice):
 @bot.command(name='conspirecaesar')
 async def conspire(ctx):
  await ctx.send('TWENTY-FOUR STAB WOUNDS,YOU DID NOT WANT TO LEAVE HIM A CHANCE,HUH?')
-
-#conspire
-@bot.command(name='conspire')
-async def conspire(ctx, userchoice):
-  conspirators = random.randint(0,30)
-  stabwounds = random.randint(1,60)
-  if conspirators > 10 and stabwounds >5:
-    await ctx.send('**'f'You manage to start a conspire against: `{user_choice}` with `{conspirators}` people, you manage to kill`{user_choice}` with `{stabwounds}`stabwounds**')
-  else:
-    await ctx.send('**'f'You try to start a conspire against: `{user_choice}` but you fail. **`')
 
 token = ""
 bot.run(token, bot = True)
