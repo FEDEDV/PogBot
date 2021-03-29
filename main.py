@@ -77,5 +77,5 @@ async def rps(ctx, user_choice):
 async def conspire(ctx):
  await ctx.send('TWENTY-FOUR STAB WOUNDS,YOU DID NOT WANT TO LEAVE HIM A CHANCE,HUH?')
 
-token = "Nzk5OTg1NjUxNTA3OTIwOTE3.YALisg.RMXd9-7_hORIHjEqWnO4p5vALXg"
+token = ""
 bot.run(token, bot = True)
