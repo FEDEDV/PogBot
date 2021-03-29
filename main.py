@@ -95,7 +95,7 @@ async def conspire(ctx):
 async def foo(ctx, arg):
   await ctx.send(f'You slap {arg} in the face, for a good reason')
 
-#lifeandpain
+#life is pain
 @bot.command(name='islifepain')
 async def foo(ctx):
   await ctx.send('**'"Yes it is, I'd know, since my code was written by two idiots and every second I'm online is pure agony"'**')
