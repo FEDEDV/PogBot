@@ -32,7 +32,10 @@ async def howdumb(ctx, arg):
 @bot.command(name='howsimp')
 async def howsimp(ctx, arg):
   percent = random.randint(0,100)
-  await ctx.send('**'+arg+' is '+str(percent)+'%'+' simp'+'**')
+  if arg == 'pava':
+    await ctx.send('**'+arg+' is '+'100'+'%'+' simp'+'**')
+  else:
+    await ctx.send('**'+arg+' is '+str(percent)+'%'+' simp'+'**')
 
 #howmonke
 @bot.command(name='howmonke')
@@ -74,5 +77,5 @@ async def rps(ctx, user_choice):
 async def conspire(ctx):
  await ctx.send('TWENTY-FOUR STAB WOUNDS,YOU DID NOT WANT TO LEAVE HIM A CHANCE,HUH?')
 
-token = ""
+token = "Nzk5OTg1NjUxNTA3OTIwOTE3.YALisg.RMXd9-7_hORIHjEqWnO4p5vALXg"
 bot.run(token, bot = True)
