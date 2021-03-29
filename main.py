@@ -112,5 +112,5 @@ async def conspire(ctx):
   else:
     await ctx.send('**''You lost''**')
 
-token = "Nzk5OTg1NjUxNTA3OTIwOTE3.YALisg.8OBE6e4WfC4ZoZ7F1OQmz-mRRx8"
+token = ""
 bot.run(token, bot = True)
