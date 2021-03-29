@@ -90,15 +90,27 @@ async def conspire(ctx, user_choice):
 async def conspire(ctx):
  await ctx.send("TWENTY-FOUR STAB WOUNDS! YOU DIDN'T WANT TO LEAVE HIM A CHANCE, HUH? DID YOU FEEL ANGER? HATE? HE WAS BLEEDING, BEGGING YOU FOR MERCY, BUT YOU STABBED HIM, AGAIN AND AGAIN AND AGAIN!... I KNOW YOU KILLED HIM. WHY DON'T YOU SAY IT? JUST SAY 'I KILLED HIM'! IS IT THAT HARD TO SAY?! JUST SAY YOU KILLED HIM! JUST SAY IT!")
 
+#lifeispain
+@bot.command(name='islifepain')
+async def foo(ctx):
+  await ctx.send('**'"Yes it is, I'd know, since my code was written by two idiots and every second I'm online is pure agony"'**')
+
 #slap
 @bot.command(name='slap')
 async def foo(ctx, arg):
   await ctx.send(f'You slap {arg} in the face, for a good reason')
 
-#life is pain
-@bot.command(name='islifepain')
-async def foo(ctx):
-  await ctx.send('**'"Yes it is, I'd know, since my code was written by two idiots and every second I'm online is pure agony"'**')
+#conspire
+@bot.command(name='slotmachine')
+async def conspire(ctx):
+  disc1 = random.randint(1,5)
+  disc2 = random.randint(1,5)
+  disc3 = random.randint(1,5)
+  await ctx.send('**'f'`{disc1}` `{disc2}` `{disc3}`''**')
+  if disc1 == disc2 and disc1 == disc3 and disc3 == disc2:
+    await ctx.send('**''You won''**')
+  else:
+    await ctx.send('**''You lost''**')
 
-token = ""
+token = "Nzk5OTg1NjUxNTA3OTIwOTE3.YALisg.8OBE6e4WfC4ZoZ7F1OQmz-mRRx8"
 bot.run(token, bot = True)
