@@ -3,7 +3,7 @@ import os
 import random
 import time
 from discord.ext.commands import Bot
-bot = Bot(command_prefix='!')
+bot = Bot(command_prefix=';')
 secure_random = random.SystemRandom()
 
 #start and set status
