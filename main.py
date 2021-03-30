@@ -81,9 +81,9 @@ async def conspire(ctx, user_choice):
   conspirators = random.randint(0,30)
   stabwounds = random.randint(1,60)
   if conspirators > 10 and stabwounds >5:
-    await ctx.send(''f'You manage to conspire against: {user_choice} with {conspirators} people, you manage to kill{user_choice} with {stabwounds} stabwounds')
+    await ctx.send('**'f'You manage to conspire against: {user_choice} with {conspirators} people, you manage to kill{user_choice} with {stabwounds} stabwounds**')
   else:
-    await ctx.send(''f'You try to conspire against: {user_choice} but you fail. `')
+    await ctx.send('**'f'You try to conspire against: {user_choice} but you fail.**')
 
 #conspirecaesar
 @bot.command(name='conspirecaesar')
@@ -93,12 +93,12 @@ async def conspire(ctx):
 #lifeispain
 @bot.command(name='islifepain')
 async def foo(ctx):
-  await ctx.send('**'"Yes it is, I'd know, since my code was written by two idiots and every second I'm online is pure agony"'**')
+  await ctx.send('**'"Yes it is, I'd know, since my code was written by two idiots"'**')
 
 #slap
 @bot.command(name='slap')
 async def foo(ctx, arg):
-  await ctx.send(f'You slap {arg} in the face, for a good reason')
+  await ctx.send(f'**You slap {arg} in the face, for a good reason**')
 
 #slotmachine
 @bot.command(name='slotmachine')
