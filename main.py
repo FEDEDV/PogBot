@@ -3,7 +3,7 @@ import os
 import random
 import time
 from discord.ext.commands import Bot
-bot = Bot(command_prefix=';')
+bot = Bot(command_prefix='!')
 secure_random = random.SystemRandom()
 
 #start and set status
@@ -100,17 +100,18 @@ async def foo(ctx):
 async def foo(ctx, arg):
   await ctx.send(f'You slap {arg} in the face, for a good reason')
 
-#conspire
+#slotmachine
 @bot.command(name='slotmachine')
-async def conspire(ctx):
-  disc1 = random.randint(1,5)
-  disc2 = random.randint(1,5)
-  disc3 = random.randint(1,5)
-  await ctx.send('**'f'`{disc1}` `{disc2}` `{disc3}`''**')
+async def slotmachine(ctx):
+  figures = (":crab:",":frog:",":fish:",":monkey:",":tophat:",":disguised_face:")
+  disc1 = secure_random.choice(figures)
+  disc2 = secure_random.choice(figures)
+  disc3 = secure_random.choice(figures)
+  await ctx.send('**'f'>{disc1} {disc2} {disc3}<''**')
   if disc1 == disc2 and disc1 == disc3 and disc3 == disc2:
-    await ctx.send('**''You won''**')
+    await ctx.send('**'f'` You won `''**')
   else:
-    await ctx.send('**''You lost''**')
+    await ctx.send('**'f'` You lost `''**')
 
-token = "Nzk5OTg1NjUxNTA3OTIwOTE3.YALisg.8OBE6e4WfC4ZoZ7F1OQmz-mRRx8"
+token = ""
 bot.run(token, bot = True)
