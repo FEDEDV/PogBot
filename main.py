@@ -2,6 +2,8 @@ import discord
 import os
 import random
 import time
+import dotenv
+from dotenv import load_dotenv
 from discord.ext.commands import Bot
 bot = Bot(command_prefix=';')
 secure_random = random.SystemRandom()
@@ -81,7 +83,7 @@ async def conspire(ctx, user_choice):
   conspirators = random.randint(0,30)
   stabwounds = random.randint(1,60)
   if conspirators > 10 and stabwounds >5:
-    await ctx.send('**'f'You manage to conspire against: {user_choice} with {conspirators} people, you manage to kill{user_choice} with {stabwounds} stabwounds**')
+    await ctx.send('**'f'You manage to conspire against: {user_choice} with {conspirators} people, you manage to kill {user_choice} with {stabwounds} stabwounds**')
   else:
     await ctx.send('**'f'You try to conspire against: {user_choice} but you fail.**')
 
@@ -101,7 +103,7 @@ async def foo(ctx, arg):
   await ctx.send(f'**You slap {arg} in the face, for a good reason**')
 
 #slotmachine
-@bot.command(name='slotmachine')
+@bot.command(name='slot')
 async def slotmachine(ctx):
   figures = (":crab:",":frog:",":fish:",":monkey:",":tophat:",":disguised_face:")
   disc1 = random.choice(figures)
@@ -112,6 +114,16 @@ async def slotmachine(ctx):
     await ctx.send('**'f'` You won `''**')
   else:
     await ctx.send('**'f'` You lost `''**')
+
+@bot.command(name='pfp')
+async def pfp(ctx, *,  avamember : discord.Member=None):
+    userAvatarUrl = avamember.avatar_url
+    await ctx.send(userAvatarUrl)
+
+@bot.command(name='icon')
+async def icon(ctx):
+    icon_url = ctx.guild.icon_url
+    await ctx.send(str(icon_url))
 
 token = ""
 bot.run(token, bot = True)
