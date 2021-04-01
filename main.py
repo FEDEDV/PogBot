@@ -115,11 +115,13 @@ async def slotmachine(ctx):
   else:
     await ctx.send('**'f'` You lost `''**')
 
+#pfp
 @bot.command(name='pfp')
 async def pfp(ctx, *,  avamember : discord.Member=None):
     userAvatarUrl = avamember.avatar_url
     await ctx.send(userAvatarUrl)
 
+#icon
 @bot.command(name='icon')
 async def icon(ctx):
     icon_url = ctx.guild.icon_url
