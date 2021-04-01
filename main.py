@@ -66,7 +66,7 @@ async def roll2(ctx):
 @bot.command(name='cointoss')
 async def cointoss(ctx):
   cointossGame = ['head', 'tail'] 
-  await ctx.send('**'+'Result: ' + str(random.choice(cointossGame))+'**')
+  await ctx.send('**'":coin:"f'Result: `{random.choice(cointossGame)}`'+'**')
 
 #rock paper scissors
 @bot.command(name='rps')
