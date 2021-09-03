@@ -95,12 +95,12 @@ async def conspire(ctx):
 #lifeispain
 @bot.command(name='islifepain')
 async def foo(ctx):
-  await ctx.send('**'"Yes it is, I'd know, since my code was written by two idiots"'**')
+  await ctx.send('**'"Yes it is, I'd know, since my code was written by two incompetent idiots."'**')
 
 #slap
 @bot.command(name='slap')
 async def foo(ctx, arg):
-  await ctx.send(f'**You slap {arg} in the face, for a good reason**')
+  await ctx.send(f'**You slap {arg} in the face, for a good reason, I assume.**')
 
 #slotmachine
 @bot.command(name='slot')
